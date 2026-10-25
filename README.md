@@ -1,4 +1,4 @@
-# EPS Research Lab — Team 1
+# EPS Research Lab
 
 Repository for the year-long research paper produced by the EPS Research Lab,
 in collaboration with Analysis Group.
