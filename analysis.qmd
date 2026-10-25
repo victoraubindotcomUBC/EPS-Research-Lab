@@ -1,6 +1,6 @@
 ---
 title: "EPS Research Lab — Analysis"
-subtitle: "Team 1"
+subtitle: "Research Lab"
 author: "EPS Research Lab"
 date: today
 format:
