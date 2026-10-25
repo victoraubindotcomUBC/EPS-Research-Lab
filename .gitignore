@@ -1,0 +1,41 @@
+# --- R ---------------------------------------------------------------
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+*.Rproj
+
+# --- Quarto / knitr ---------------------------------------------------
+/.quarto/
+*_files/
+*_cache/
+/*_cache/
+*.html
+*.pdf
+*.docx
+
+# --- Generated output -------------------------------------------------
+output/*
+!output/.gitkeep
+
+# --- Data -------------------------------------------------------------
+*.csv
+*.xlsx
+*.xls
+*.dta
+*.sav
+*.rds
+*.RData
+*.zip
+*.gz
+
+# Force-add a small reference file if genuinely needed:
+#   git add -f input/small-lookup-table.csv
+
+# --- OS / editor ------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*~

@@ -1,0 +1,71 @@
+---
+title: "EPS Research Lab — Analysis"
+subtitle: "Team 1"
+author: "EPS Research Lab"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: show
+    theme: cosmo
+execute:
+  warning: false
+  message: false
+---
+
+## Setup
+
+```{r}
+#| label: setup
+library(tidyverse)
+library(fixest)
+library(modelsummary)
+library(here)
+```
+
+`here::here()` always resolves from the folder containing the `.Rproj` file, so
+paths work on everybody's machine. Never use `setwd()`.
+
+```{r}
+#| label: paths
+#| eval: false
+raw <- read_csv(here("input", "your-file.csv"))
+```
+
+## Research question
+
+> Replace this once we have settled it.
+
+## Data
+
+Source, unit of observation, time period, sample restrictions.
+
+## Descriptive statistics
+
+```{r}
+#| label: descriptives
+#| eval: false
+datasummary_skim(raw)
+```
+
+## Estimation
+
+```{r}
+#| label: estimation
+#| eval: false
+m1 <- feols(y ~ x | unit + year, data = raw, cluster = ~unit)
+modelsummary(m1, stars = TRUE)
+```
+
+## Results
+
+Magnitude, sign, precision, and what would have to be true for a causal reading.
+
+## References
+
+---
+
+*Render with the Render button. HTML needs nothing extra; PDF needs TinyTeX
+(`tinytex::install_tinytex()`).*
