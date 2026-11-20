@@ -1,157 +1,124 @@
-# Workstream 2 Updates
-
-## 1. Selected Research Topics
-
-### Topic 1: [Title]
-**Research question:** 
-
-**Topic 2: [Title]**
-**Research question:** 
-
+## 1. Selected Research Topic
+ 
+### Topic 1: Do Mandated Divestitures Work? Evidence from the Sobeys-Safeway Merger
+ 
+**Research question:** When Sobeys bought Canada Safeway in 2013, the Competition Bureau made it sell 23 stores in Western Canada. Did those forced store sales lead to lower grocery prices in the affected western communities, compared with similar communities where Sobeys got to keep both of its brands?
+ 
 ---
-
-## 2. Topic 1: [Title]
-
+ 
+## 2. Topic 1: Do Mandated Divestitures Work? Evidence from the Sobeys-Safeway Merger
+ 
 ### A. Five Ws and One H
-
-- **Who:** 
-- **What:** 
-- **When:** 
-- **Where (Treatment):** 
-- **Where (Comparison):** 
-- **Why:** 
-- **How:** 
-
+ 
+- **Who:** The main players are Empire Company Limited and its subsidiary Sobeys, Canada's No. 2 grocer behind Loblaw, with about 1,500 stores in 10 provinces. The target was Canada Safeway, which had about C$6.7 billion in sales and 29,000 employees. Also in the picture are the Competition Bureau, western Canadian shoppers, rivals like Loblaw, Walmart and Target, and the three buyers of the divested stores. According to the Google AI summary (which cites Supermarket News, Canadian Grocer, CBC and Wikipedia), the buyers were:
+  1. **Overwaitea Food Group** (part of the Jim Pattison Group, the company behind Save-On-Foods): 15 stores in British Columbia and Alberta, mostly rebranded as Save-On-Foods.
+  2. **Federated Co-operatives Ltd. (FCL):** 14 stores in Alberta, Saskatchewan and Manitoba, bought on behalf of local retail co-ops.
+  3. **Munroe's FreshCo Ltd.**, an independent buyer: 1 store, the Price Chopper on Main Street in Winnipeg.
+  
+  Those add up to 30 stores, not 23, because Sobeys sold seven extra stores voluntarily (more on that under "What").
+ 
+- **What:** Sobeys bought substantially all of Canada Safeway's assets for about C$5.8 billion. The package included 213 stores, about 199 in-store pharmacies, 62 gas stations, 10 liquor stores, 4 distribution centres and 12 manufacturing facilities. CBC, Lexpert and the Georgia Straight all confirm those numbers. Under the October 22, 2013 consent agreement, the Bureau required Sobeys to divest 23 stores: 13 Safeway stores and 10 Sobeys-owned stores (including IGA and Price Chopper banners), spread across BC, Alberta, Saskatchewan and Manitoba. The towns named in the summary include Sidney, Tsawwassen, Victoria and New Westminster in BC; Edmonton, Canmore, Cochrane, Leduc, Fort McMurray, Fort Saskatchewan, Taber and Wetaskiwin in Alberta; Regina and Saskatoon in Saskatchewan; and Winnipeg in Manitoba.
+  
+  The consent agreement also set rules for the sales. Each buyer had to be fully independent of Sobeys, committed to running the store, and able to operate a full-line grocery store. Sobeys could hold no interest in the sold properties for 10 years, and restrictive covenants on the sites were ruled out.
+  
+  In February 2014, Sobeys signed deals to sell 30 stores for roughly C$430 million (Canadian Grocer and CBC, February 13, 2014). Seven of the stores sold to Overwaitea weren't on the Bureau's list. That fits with Overwaitea buying 8 required plus 7 voluntary stores, FCL buying 14, and Munroe's buying 1, which gives 22 + 1 = 23 required stores [Verify this against the Bureau release and the consent agreement's store schedule].
+  
+  The City of Edmonton report CR_797 (February 18, 2014) gives a concrete local picture. Sobeys had 16 stores and Safeway had 21 in Edmonton, and four were divested: Safeway Mill Woods, Sobeys Hawkstone, Sobeys Goldbar and IGA Ottewell. That left Sobeys with 33 outlets in the city. Empire also expected about C$200 million a year in savings within three years.
+ 
+- **When:** The deal was announced June 12, 2013, the consent agreement came October 22, 2013, and the purchase closed November 4, 2013. The sale agreements for the 30 stores were announced February 13, 2014, and the Bureau approved the sale of 22 stores to Overwaitea and FCL that same day. So the actual store handovers happened after the deal closed, spread across late 2013 and 2014 [Verify the actual transfer dates]. Our analysis window is 2011 to 2016.
+ 
+- **Where (Treatment):** Western Canadian markets that had a mandated divestiture. Based on the towns above, the likely Statistics Canada CPI cities are Victoria (Victoria, Sidney), Vancouver (Tsawwassen, New Westminster), Edmonton (the four named stores, and possibly Leduc and Fort Saskatchewan), Regina, Saskatoon and Winnipeg [Verify each store's city against the consent agreement's schedule]. Calgary isn't in the summary's list, but Cochrane sits right next to it, so Calgary could be partly treated [Verify]. Canmore, Taber, Fort McMurray and Wetaskiwin aren't CPI cities, so they'd need different data (see Section D).
+ 
+- **Where (Comparison):** For the main specification, we'd use eastern CPI cities in Ontario, Quebec and Atlantic Canada. Safeway never operated there, so Sobeys was untouched by the merger. For robustness, we'd also try western markets where Sobeys kept both banners, and Calgary if it turns out to have little or no divestiture. These are different groups, so the team still needs to lock in the main choice.
+ 
+- **Why:** Divestiture is the Bureau's main alternative to blocking a merger outright, so whether it actually protects shoppers is a big policy question. The Bureau's 2023 grocery market study, and its three-year follow-up in September 2026, keep concentration firmly in the spotlight.
+ 
+- **How:** We run a difference-in-differences on city-level "food purchased from stores" CPI, comparing treated and comparison cities before and after the divestitures. The Hosken et al. paper runs a separate difference-in-differences for each merger market and then relates the results to concentration, and we can do the same city by city.
+  
+  As an extension, we can measure how exposed each market was using distance. Wherever we have store-level or town-level data, we can use the log of the distance to the nearest divested store, which captures an effect that fades quickly with distance and then levels off. Two practical points: distance has to be greater than zero for the log to work, so zero-distance cases need separate handling or a log(1 + distance) version. And if the price outcome is also in logs, the distance coefficient reads as an elasticity. We can also count divested stores inside 3 km and 6 km rings, which mirrors how Hosken et al. redefine local concentration.
+  
+  Two cautions on this. The regression notes come from a Google AI summary, so please cite a standard econometrics reference in the deck. And a distance design only works with store-level or town-level prices, while the CPI is only published by city.
+ 
 ### B. Literature Review (~5 Papers)
-
+ 
 | Paper / Citation | Research Question & Findings | Methodology / Design | Relevance |
 |---|---|---|---|
-| 1. | | | |
-| 2. | | | |
-| 3. | | | |
-| 4. | | | |
-| 5. | | | |
-
+| 1. **Ashenfelter, Hosken & Weinberg (2013)**, "The Price Effects of a Large Merger of Manufacturers: A Case Study of Maytag-Whirlpool," *American Economic Journal: Economic Policy* 5(1), 239-261 | How did Whirlpool's purchase of Maytag affect appliance prices? Prices rose for dishwashers and rose a lot for clothes dryers, while refrigerators and clothes washers saw no price effect. The merged firm's market share and product variety fell in all four categories. The paper doesn't find offsetting efficiency pass-through. | Before-and-after difference-in-differences, comparing products with different exposure to the merger. | **Our template** for measuring a merger's price effect in a simple, transparent way. The variety result is also a reminder that a price index can miss changes in choice. |
+| 2. **Kwoka (2015)**, *Mergers, Merger Control, and Remedies: A Retrospective Analysis of U.S. Policy*, MIT Press | Do merger enforcement and remedies keep prices down? Not reliably. Neither divestiture nor conduct remedies consistently prevented post-merger price increases, and mergers with divestiture remedies still averaged about a 7.05% increase (per our verification notes; confirm the page). | Retrospective meta-analysis of empirical U.S. merger studies. | **Gives us a testable hypothesis:** the Sobeys divestitures may not have lowered prices much. For Q&A, Vita & Osinski (2018) challenge Kwoka's sample and weighting, but even their adjusted estimate shows post-divestiture price increases (about 4.43%). |
+| 3. **Hosken, Olson & Smith (2018)**, "Do Retail Mergers Affect Competition? Evidence from Grocery Retailing," *Journal of Economics & Management Strategy* 27(1), 3-22 | Do grocery mergers raise local prices? It depends on how concentrated the market was beforehand. Mergers in highly concentrated markets most often raised prices, while those in less concentrated markets most often lowered them. | Difference-in-differences for each of 14 U.S. merger markets, using ACCRA/CCER grocery price quotes and Trade Dimensions store census data (not scanner data). | **Our closest match,** and our stepping stone paper. It uses metro-level prices, about the same resolution as our city CPI. |
+| 4. **Allain, Chambolle, Turolla & Villas-Boas (2017)**, "Retail Mergers and Food Prices: Evidence from France," *Journal of Industrial Economics* 65(3), 469-509 | How did French food-retailer mergers affect local food prices? Competitors' prices rose by about 1.5% to 2.5% alongside the merging firms' prices, with bigger effects where local concentration rose more. | Difference-in-differences using local overlap between the merging retailers. | **Backs up our overlap idea,** and warns us that competitors may change prices too, which matters for our comparison group. |
+| 5. **Competition Bureau of Canada (2023)**, *Canada Needs More Grocery Competition* | How competitive is Canada's grocery sector? Not very. Concentration is high (most Canadians buy from Loblaw, Sobeys, Metro, Costco or Walmart), food margins are rising, and independents face big entry barriers like wholesale dependence on the big chains and real estate property controls. | Non-causal retail grocery market study using consumer surveys, industry data and stakeholder feedback. | **Our policy motivation.** The Bureau's September 2026 follow-up, *Assessing progress on the Competition Bureau's retail grocery recommendations*, keeps it current. |
+ 
 ### C. Stepping Stone Paper
-
-**Paper / Citation:** 
-
-**Link:** 
-
-- **Research question:** 
-- **Identification strategy:** 
-- **Data used:** 
-- **Key outcomes:** 
-- **Robustness checks:** 
-
+ 
+**Paper / Citation:** Hosken, D. S., Olson, L. M., & Smith, L. K. (2018). "Do Retail Mergers Affect Competition? Evidence from Grocery Retailing." *Journal of Economics & Management Strategy*, 27(1), 3-22.
+ 
+**Link:** https://doi.org/10.1111/jems.12218
+ 
+- **Research question:** Do horizontal supermarket mergers push up grocery prices in affected U.S. metro areas (CBSAs), and does the effect depend on how concentrated the market is (post-merger HHI and the change in HHI)?
+- **Identification strategy:** The authors run a separate difference-in-differences for each of 14 merger-affected CBSAs (mergers touching at least 5% of stores in 2007-2008), comparing each to unaffected CBSAs and dropping the merger year. They add propensity-score trimmed and weighted versions and synthetic control, then relate the 14 estimated price effects to concentration.
+- **Data used:** Quarterly ACCRA/CCER price quotes for 26 frequently bought grocery items (2005-2009), the A.C. Nielsen Trade Dimensions annual store census (2004-2009) for ownership, entry, exit and HHI, and U.S. Census demographics rolled up to the CBSA level. The authors explain that scanner datasets cover too few markets for their design.
+- **Key outcomes:** The log of an expenditure-weighted price index across the 26 items (plus item-level log prices), and how the estimated price effects vary with concentration.
+- **Robustness checks:** A narrow comparison group (75 CBSAs with no entry, exit or mergers) and a broad one (117 CBSAs where such events touched under 2% of stores). They drop controls whose pre-merger trends differ at the 10% level, use propensity-score trimming and weighting, and run synthetic control with placebo distributions from up to 116 comparison markets. They also re-run equal-weighted item-level regressions, control for incumbent expansion and contraction, redefine local HHI with 3-mile and 6-mile circles, and check CCER prices against IRI scanner data for 8 overlapping categories.
+ 
 **Research Gap & Proposed Contribution:**
-- **Gap:** 
-- **Proposed extension:** 
-- **Expected contribution:** 
-
+- **Gap:** Hosken et al. study U.S. mergers with broad metro-level prices and don't isolate divestiture remedies. Kwoka's evidence is mostly retrospective U.S. cases, Allain et al. cover France, and the Bureau's grocery study is descriptive rather than causal. As far as we know, nobody has produced causal evidence on Canada's biggest western grocery merger and its remedy, even though the public record is unusually rich: a named store list, named buyers, and explicit remedy conditions (independent buyers, a 10-year restriction on Sobeys's interest, and no restrictive covenants).
+- **Proposed extension:** We'd do five things. First, borrow the Hosken et al. toolkit (city-by-city difference-in-differences, narrow and broad control groups, pre-trend screening, propensity weighting, and synthetic control with placebos) and apply it to Canadian CPI cities. Second, run a dose-response test: do cities with a bigger share of Sobeys and Safeway stores divested, or a bigger change in concentration, show bigger price effects? Third, use log-distance and 3 km and 6 km ring measures wherever finer data exists. Fourth, split results by buyer type (Overwaitea/Save-On-Foods, FCL co-ops, the independent) and by required versus voluntary stores. Fifth, deal properly with the phased timing of the store handovers.
+- **Expected contribution:** The first causal Canadian evidence on whether a structural remedy actually restored competition. It tests Kwoka's pessimistic finding in a setting where the remedy conditions were fairly strict, and the results would feed straight into the Bureau's ongoing grocery policy work.
+ 
 ### D. Data Availability
-
+ 
 | Dataset / Source | Variables | Coverage / Period | Publicly Available? |
 |---|---|---|---|
-| 1. | | | |
-| 2. | | | |
-| 3. | | | |
-
-**Data feasibility/limitations:** 
-
+| 1. **Statistics Canada Table 18-10-0004** (CPI, "food purchased from stores") | Monthly price index by province and major city (Victoria, Vancouver, Edmonton, Calgary, Saskatoon, Regina and Winnipeg in the west, plus eastern cities) | Monthly, covers 2011 to 2016 | Yes. Index changes only, not price levels. |
+| 2. **Statistics Canada Table 18-10-0002** (older average retail food prices) | Average prices of selected foods | Runs to 2022; check whether it goes below the national or provincial level | Yes |
+| 3. **Statistics Canada Table 18-10-0245** (current average retail prices) | Average prices built from scanner data | Starts too late for 2013 | Yes, but not usable for this project |
+| 4. **Competition Bureau release, position statement and Tribunal consent agreement** | The 23 required stores, store schedule, conditions, buyer approvals | October 2013 and February 2014 | Yes |
+| 5. **Canadian Grocer, CBC and Business in Vancouver articles** (October 2013, February 2014) | 30 stores sold for about C$430 million (about C$690 million in annual sales), buyers and store counts | 2013 to 2014 | Yes |
+| 6. **City of Edmonton report CR_797** (February 18, 2014) | Named Edmonton stores, before-and-after counts (16 Sobeys and 21 Safeway; four divested), store map | 2013 to 2014 | Yes. Other cities may have similar reports. |
+| 7. **Empire/Sobeys annual reports and filings (SEDAR+), and archived store locators** | Store counts, banners, conversion timeline, locations to rebuild overlap | 2011 to 2016 | Yes, but laborious |
+| 8. **Census 2011/2016, Labour Force Survey, Survey of Household Spending** | Population, income, wages and food spending by region | 2011 to 2016 | Yes |
+| 9. **Nielsen / Numerator scanner data (or flyer data)** | Store- or town-level prices | Varies | No. It's proprietary, so we'd need a university library licence. |
+ 
+**Data feasibility/limitations:** The good news is that our stepping stone paper also uses metro-level prices, so city-level CPI is a defensible resolution. The limits are real, though. The CPI is an index, so it shows changes rather than price levels (city fixed effects take care of levels). It covers every store in a city, so a small treatment gets diluted: in Edmonton only 4 of about 37 Sobeys and Safeway stores were divested, roughly 11%, so our estimates may understate the effect on the stores actually involved. The CPI also can't see changes in variety or service. Several divested towns (Canmore, Taber, Fort McMurray, Wetaskiwin) aren't CPI cities, and small-town prices would need proprietary scanner data. Before we commit, we should map all 23 required stores and the 7 voluntary ones to CPI cities and confirm how many treated cities we really have.
+ 
 ### E. Proposed Empirical Approach
-
-- **Treatment group:** 
-- **Control group:** 
-- **Outcome variable(s):** 
-- **Proposed methodology:** 
-- **Key identifying assumption:** 
-
----
-
-## 3. Topic 2: [Title]
-
-### A. Five Ws and One H
-
-- **Who:** 
-- **What:** 
-- **When:** 
-- **Where (Treatment):** 
-- **Where (Comparison):** 
-- **Why:** 
-- **How:** 
-
-### B. Literature Review (~5 Papers)
-
-| Paper / Citation | Research Question & Findings | Methodology / Design | Relevance |
-|---|---|---|---|
-| 1. | | | |
-| 2. | | | |
-| 3. | | | |
-| 4. | | | |
-| 5. | | | |
-
-### C. Stepping Stone Paper
-
-**Paper / Citation:** 
-
-**Link:** 
-
-- **Research question:** 
-- **Identification strategy:** 
-- **Data used:** 
-- **Key outcomes:** 
-- **Robustness checks:** 
-
-**Research Gap & Proposed Contribution:**
-- **Gap:** 
-- **Proposed extension:** 
-- **Expected contribution:** 
-
-### D. Data Availability
-
-| Dataset / Source | Variables | Coverage / Period | Publicly Available? |
-|---|---|---|---|
-| 1. | | | |
-| 2. | | | |
-| 3. | | | |
-
-**Data feasibility/limitations:** 
-
-### E. Proposed Empirical Approach
-
-- **Treatment group:** 
-- **Control group:** 
-- **Outcome variable(s):** 
-- **Proposed methodology:** 
-- **Key identifying assumption:** 
-
----
-
-## 4. Team Task Allocation
-
-| Team Member | Topic | Assigned Task | Deliverable | Deadline |
-|---|---|---|---|---|
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-
-## 5. Friday Presentation (5–10 Minutes per Topic)
-
-- [ ] Research question and motivation
-- [ ] Proposed shock and comparison group
-- [ ] Stepping stone paper and identification strategy
-- [ ] Research gap and contribution
-- [ ] Data sources and feasibility
-
-## 6. Outstanding Questions / Next Steps
-
-- [ ] Finalize two research topics.
-- [ ] Complete literature reviews.
-- [ ] Identify stepping stone papers and research gaps.
-- [ ] Verify public data availability.
-- [ ] Establish preliminary empirical strategies.
-- [ ] Finalize presentation materials.
-
+ 
+- **Treatment group:** Western CPI cities with divestitures, most likely Victoria, Vancouver, Edmonton, Regina, Saskatoon and Winnipeg [Verify with the store schedule]. We'd measure how heavily treated each city was in three ways: the share of pre-merger Sobeys and Safeway stores that were divested (about 11% in Edmonton, for example); the change in concentration (HHI), as in Hosken et al.; and, where store- or town-level data exists, the log of the distance to the nearest divested store (using log(1 + distance) or handling zero distances separately). We'd run the main version with all 30 stores sold and a stricter version using only the 23 required ones.
+- **Control group:** For the main specification, eastern CPI cities with no Safeway presence. Following Hosken et al., we'd build a narrow control group (cities with no major entry, exit or merger activity) and a broad one, and screen out controls whose pre-period trends differ from the treated cities at the 10% level. For robustness, we'd use western markets where Sobeys kept both banners, plus Calgary if it turns out to have little or no divestiture.
+- **Outcome variable(s):** The log of the monthly "food purchased from stores" CPI. Secondary outcomes are average prices of core items like milk, bread and eggs (if the older series has enough geographic detail), and store- or town-level prices if we get scanner or flyer data.
+- **Proposed methodology:**
+  1. **Start with city-level estimates.** Run a difference-in-differences for each treated city against the control cities, as Hosken et al. do for each merger, plus a pooled two-way fixed effects version with city and month fixed effects. The month effects handle seasonality.
+  2. **Add event studies.** Leads test pre-trends and anticipation (the June 2013 announcement), and lags show how the effect builds up.
+  3. **Take timing seriously.** The deal closed November 4, 2013, but the store sale agreements weren't signed until February 2014 and the handovers came after that. So we'd run the model with several start dates (announcement, consent, close, sale agreements, and handover dates when known). If handovers are spread across months, we'd use a staggered-timing estimator such as Callaway and Sant'Anna instead of plain two-way fixed effects. This corrects my earlier claim that a single treatment date removes the timing issue.
+  4. **Back it up with weighting and synthetic control.** Use propensity-score weighting and synthetic control for each treated city, with placebo tests that treat every control city as if it had been treated.
+  5. **Fix the inference.** With so few treated cities, use a wild cluster bootstrap, and compare it with randomization inference and the Conley-Taber approach.
+  6. **Test for a dose-response.** Regress the city estimates (or price changes) on divestiture share and the change in concentration, and add the log-distance specification wherever finer data exists.
+  7. **Look at who bought the stores.** Split the results by buyer type (Overwaitea/Save-On-Foods, FCL co-ops, the independent) and by required versus voluntary stores.
+  8. **Control for local conditions.** Include regional wages, income, local labour market conditions and competitor store counts.
+- **Key identifying assumption:** Parallel trends. Without the divestiture, food prices in treated and comparison cities would have moved together. This is the assumption most at risk, because the Bureau only forced divestitures in the most concentrated markets, and the Alberta and Saskatchewan economies took shocks that didn't reach the east. We defend it with pre-trend tests, narrow and broad control groups, propensity weighting and synthetic control.
+ 
+**Threats to flag and how we handle each one**
+ 
+| Threat | Why it matters | How we handle it |
+|---|---|---|
+| 1. **Merger, remedy and efficiencies are bundled together** | We can't say what prices would have been with no remedy at all, and Empire's expected C$200 million in yearly savings could lower prices on their own. | Call the estimate the net effect of merger plus remedy plus efficiencies, and use the dose-response (does more divestiture mean a bigger offset?) to learn about the remedy itself. |
+| 2. **Which stores got divested** | Divestitures only happened in the most concentrated markets, and in Edmonton the divested stores were smaller neighbourhood stores. | Pre-trend screening, propensity weighting, synthetic control, and controls for pre-merger concentration. |
+| 3. **Close date versus actual handovers** | The deal closed November 4, 2013, sale agreements were signed February 13, 2014, and handovers came after that. | Several start dates, event studies, and a staggered-timing estimator if handovers are spread out. |
+| 4. **Anticipation** | The deal was public from June 2013, so prices could have moved early. | Leads in the event study, plus a placebo start date. |
+| 5. **Seven voluntary divestitures (30 sold versus 23 required)** | The extra stores weren't mandated, which blurs "Bureau-required" with "Sobeys chose to sell." | Run the main model with all 30 and a stricter version with the 23 required, then compare. |
+| 6. **Rebranding and conversions** | Sobeys hadn't decided between the Sobeys and Safeway banners, and Overwaitea rebranded stores to Save-On-Foods. Remodels and temporary closures can shift prices and availability. | Build a conversion timeline from Empire filings and flyers, add conversion indicators, and test with and without the conversion months. |
+| 7. **Buyers aren't all alike** | Overwaitea, the FCL co-ops and the independent may price very differently, so "the remedy" isn't one single treatment. | Split results by buyer type. |
+| 8. **Competitor entry and exit** | Walmart and Target were turning up competition in 2013, Target later left Canada, and the buyers' own expansion matters too [Verify the Target exit date]. | Control for competitor store counts (Canadian Business Counts, store locators), and drop affected months as a robustness check. |
+| 9. **Regional shocks after the deal** | The oil price drop in late 2014 hit Alberta and Saskatchewan, and the Fort McMurray wildfire in May 2016 hit one divested town [Verify the dates]. | Regional income and employment controls, province-by-year effects as a robustness check, and a 2015 end date for any town-level analysis that includes Fort McMurray. |
+| 10. **Cost shocks that differ by region** | Alberta minimum wage increases starting in 2015 and the weaker Canadian dollar pushed up grocery costs unevenly [Verify]. | Control for wages, and test with provincial trends. |
+| 11. **Regional wages and living costs differ** | Average wages and the CPI vary across regions, so shoppers may face different price burdens. | City fixed effects, regional income and wage controls, and income-adjusted outcomes as a secondary check. |
+| 12. **Very few treated places** | With about six treated CPI cities, ordinary clustered standard errors are too optimistic. | Wild cluster bootstrap, randomization inference, Conley-Taber, and synthetic control placebo tests. |
+| 13. **The CPI dilutes the treatment** | The CPI covers every store in a city, and in Edmonton only about 11% of Sobeys and Safeway stores were divested. | Treat the CPI estimate as a lower bound, use the intensity measures, and bring in store- or town-level data if we can get it. |
+| 14. **Spillovers to the comparison group** | Allain et al. find competitors' prices also rose after a merger, and national procurement or pricing decisions could reach eastern Sobeys stores. | Use several comparison groups, including western ones, and test whether eastern prices moved. |
+| 15. **Prices miss variety and service** | Ashenfelter et al. find that variety fell after Maytag-Whirlpool, and the CPI may not catch changes like that. | Say this limit plainly, and add a store-count or assortment check if we can. |
+| 16. **Bundled pharmacies, fuel and liquor** | Safeway came with pharmacies, gas stations and liquor stores. They're not in the food CPI but may affect pricing strategy. | Note it as a limitation, and look for loyalty or fuel-reward changes in Empire filings. |
+| 17. **Two comparison groups in our notes** | Our notes describe both "towns where Sobeys kept both banners" and "towns with no Safeway overlap," which are different groups. | Make eastern cities the main group and use western non-divested markets as robustness. |
+| 18. **A different issue in the same news cycle** | The 2026 Bureau release about Empire's property controls is a separate matter from the 2013 deal. | Keep it out of this project, and treat it as its own idea. |
+ 
 **Last updated: November 19, 2026**
